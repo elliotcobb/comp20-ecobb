@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+        <title>My News Feed</title>
+        <script src="jquery-1.11.1.min.js"></script>
+        <script>
+          // Most of your work will be done here...
+        </script>
+</head>
+
+<body>
+        <h1>My News Feed</h1>
+        <h3>My news update: <input type="text" id="msg" name="msg" size="30" /></h3>
+        <div id="news">
+                
+                <p></p>
+        </div>
+
+        <script>
+                $(document).ready(function() {
+                    if (localStorage['newsfeed'] === undefined) {
+                        localStorage['newsfeed'] = "";
+                    } else {
+                        $('#news').append(localStorage["newsfeed"]);
+                    }
+                });
+
+                $('#msg').keyup(function(event){
+                    if(event.keyCode == 13){
+
+                        var $paragraph = "<p>" + timeStamp() + "- " + $(this).val() + "<br></p>";
+                        $('#news').prepend($paragraph);
+
+                        localStorage['newsfeed'] = $paragraph + localStorage['newsfeed'];
+                    }
+                });
+
+                // returns string with current date in format:  h:min m/d/y
+                function timeStamp() {
+                    var d = new Date(Date.now());
+                    return d.toString("MMM dd");
+                }
+
+
+        </script>
+
+
+</body>
+</html>

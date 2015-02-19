@@ -1,0 +1,1 @@
+Trail Buddies makes it easy for users to post and join hikes going on in their area. Powered by the Google maps api, JQuery, Bootstrap, and Node js, Trail Buddies shows you the hikes going on in your area with the capability to add your own hikes and filter results.  
