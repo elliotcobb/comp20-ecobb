@@ -10,6 +10,7 @@ var mapOptions = {
 };
 var marker_array = [];
 
+// initializes map
 function initialize() {
         map = map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
         MyLocation();
