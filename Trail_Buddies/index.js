@@ -10,6 +10,13 @@ var mapOptions = {
 };
 var marker_array = [];
 
+$(document).ready( function () {
+
+        // launch the welcome modal
+        $('#welcomemodal').modal();
+
+});
+
 function initialize() {
         map = map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
         MyLocation();
@@ -201,8 +208,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 $(function () {
-        $('[data-toggle="popover"]').popover();
+        if (screen.width > 960) {
+                $('[data-toggle="tooltip"]').tooltip();
+        }
 });
+
 
 // add open datepicker in add hike modal
 $(function() {
