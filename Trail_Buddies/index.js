@@ -10,6 +10,9 @@ var mapOptions = {
 };
 var marker_array = [];
 
+
+////////////  nav bar and welcome modal responsive design //////////////
+
 $(document).ready( function () {
 
         // launch the welcome modal
@@ -18,12 +21,26 @@ $(document).ready( function () {
         if (screen.width < 960) {
 
                 $('.welcomemessage').append("<p>Double click on the map to add a hike.</p>");
+                $('#addhikelink').css('display','none');
+                $('[data-toggle="popover"]').popover();
+
+
         } else {
 
                 $('.welcomemessage').append("<p>Right click on the map to add a hike.</p>");
+                $('#addhikelinkmobile').css('display','none');
+                $('[data-toggle="tooltip"]').tooltip();
         }
 
+
+
+        // if (screen.width < 960) {
+        //         $('[data-toggle="popover"]').attr("data-content", "Double click on the map to add a hike.");
+        // }
 });
+
+
+////////////////// Google maps API implementation //////////////////////
 
 function initialize() {
         map = map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
@@ -215,13 +232,6 @@ function renderMap()
 google.maps.event.addDomListener(window, 'load', initialize);
 
 
-$(function () {
-        if (screen.width > 960) {
-                $('[data-toggle="tooltip"]').tooltip();
-        }
-});
-
-
 // add open datepicker in add hike modal
 $(function() {
         $( "#datepicker" ).datepicker({ minDate: 0});
@@ -312,9 +322,3 @@ function setAllMap(map) {
     marker_array[i].setMap(map);
   }
 }
-
-$(document).ready( function() {
-        if (screen.width < 960) {
-                $('[data-toggle="popover"]').attr("data-content", "Double click on the map to add a hike.");
-        }
-});

@@ -21,57 +21,58 @@
 </head>
 <body>
 
-    <!-- Welcome modal -->
-    <div class="modal fade" id="welcomemodal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Welcome to Trail Buddies!</h4>
-                </div>
-                <div class="modal-body welcomemessage">
-                    <p>Trail Buddies lets you find and post hikes, walks, and other adventures in your area.</p> 
-                    <p>Click on the pins to see scheduled hikes.</p>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <!-- nav bar -->
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <ul class="nav navbar-nav">
-                    <li><a class="navbar-brand" href="#"><img alt="Trail Buddies" src="mtn.png"></a></li>
-                    <li><a class="navbar-brand" data-toggle="tooltip" data-placement="bottom" title="Welcome! Trail Buddies lets you find and post hikes in your area." href="#">Trail Buddies</a></li>
-                    <li><a id="addhikelink" data-toggle="tooltip" data-placement="bottom" title="Right click on the map to add a hike." href="#">Add a Hike</a></li>
-                    <li><a data-toggle="collapse" data-target="#demo" aria-expanded="false" aria-controls="demo" href="#">Filter</a></li>
-
-                </ul>
+<!-- Welcome modal -->
+<div class="modal fade" id="welcomemodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Welcome to Trail Buddies!</h4>
             </div>
+            <div class="modal-body welcomemessage">
+                <p>Trail Buddies lets you find and post hikes, walks, and other adventures in your area.</p> 
+                <p>Click on the pins to see scheduled hikes.</p>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- nav bar -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" href="#"><img alt="Trail Buddies" src="mtn.png"></a></li>
+                <li><a class="navbar-brand" data-toggle="tooltip" data-placement="bottom" title="Welcome! Trail Buddies lets you find and post hikes in your area." href="#">Trail Buddies</a></li>
+                <li><a id="addhikelink" data-toggle="tooltip" data-placement="bottom" title="Right click on the map to add a hike." href="#">Add a Hike</a></li>
+                <li><a id="addhikelinkmobile" data-toggle="popover" data-placement="bottom" data-content="Double click on the map to add a hike." href="#">Add a Hike (m)</a></li>
+                <li><a data-toggle="collapse" data-target="#demo" aria-expanded="false" aria-controls="demo" href="#">Filter</a></li>
+
+            </ul>
         </div>
-    </nav>
-
-        <div id="demo" class="collapse">
-
-
-        <form class="filterfield form-inline" role="form" id="filterdateform">
-            <h4>Date</h4>
-            <p>From <label class='control-label' id="datelabel" for='datepickerfiltermin'>Red alert: Empty fields!</label>
-            <label class='control-label' id="datelabel2" for='datepickerfiltermin'>Date range must be in order</label>
-            <input type="text" name="mindate" class="filterdate form-control" id="datepickerfiltermin"> 
-            to <input type="text" name="maxdate" class="filterdate form-control" id="datepickerfiltermax" class="form-control"></p>
-            <button type="button" id="filterdatebutton" class="btn btn-default">
-                Filter
-            </button>
-            <button type="button" id="clearfilterdatebutton" class="btn btn-default">
-                Clear filter
-            </button>
-            <script type="text/javascript">
-                
-            </script>
-        </form>
     </div>
+</nav>
+
+    <div id="demo" class="collapse">
+
+
+    <form class="filterfield form-inline" role="form" id="filterdateform">
+        <h4>Date</h4>
+        <p>From <label class='control-label' id="datelabel" for='datepickerfiltermin'>Red alert: Empty fields!</label>
+        <label class='control-label' id="datelabel2" for='datepickerfiltermin'>Date range must be in order</label>
+        <input type="text" name="mindate" class="filterdate form-control" id="datepickerfiltermin"> 
+        to <input type="text" name="maxdate" class="filterdate form-control" id="datepickerfiltermax" class="form-control"></p>
+        <button type="button" id="filterdatebutton" class="btn btn-default">
+            Filter
+        </button>
+        <button type="button" id="clearfilterdatebutton" class="btn btn-default">
+            Clear filter
+        </button>
+        <script type="text/javascript">
+            
+        </script>
+    </form>
+</div>
 
 
 <!-- Modal2 JoinHike -->
