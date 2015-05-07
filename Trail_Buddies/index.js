@@ -15,6 +15,14 @@ $(document).ready( function () {
         // launch the welcome modal
         $('#welcomemodal').modal();
 
+        if (screen.width < 960) {
+
+                $('.welcomemessage').append("<p>Double click on the map to add a hike.</p>");
+        } else {
+
+                $('.welcomemessage').append("<p>Right click on the map to add a hike.</p>");
+        }
+
 });
 
 function initialize() {
